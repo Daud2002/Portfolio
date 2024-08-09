@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       dropShadow: {
-        'red': '0 10px 30px rgba(165, 40, 145, 0.8)', // Custom red shadow
+        'red': '0 10px 30px rgba(0,0,0, 0.69)',
       }
     },
   },
