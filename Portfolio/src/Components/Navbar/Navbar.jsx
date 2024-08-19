@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { SiLinkedin } from "react-icons/si";
 import { FaWhatsapp } from "react-icons/fa6";
 import { BsGithub } from "react-icons/bs";
-import { Link, NavLink } from 'react-router-dom';
-import './Navbar.css'
+import { Link } from 'react-router-dom';
 import { HiBars3 } from "react-icons/hi2";
 import { RxCross1 } from "react-icons/rx";
 
@@ -19,23 +18,24 @@ export default function Navbar() {
             link: '/'
         },
         {
-            namez: 'Portfolio',
-            link: '/portfolio'
+            namez: 'About',
+            link: '#about'
         },
         {
-            namez: 'About',
-            link: '/about'
+            namez: 'Projects',
+            link: '#projects'
         },
+
         {
             namez: 'Contact',
-            link: '/contact'
+            link: '#contact'
         }
     ]
 
 
     return (
-        <div className='flex-wrap border-[1px] border-b-black sticky top-0 z-10'>
-            <div className='flex md:justify-evenly justify-around py-3 items-center w-[100%] bg-white h-[12vh]'>
+        <div className='flex-wrap border-[1px] shadow-md sticky top-0 z-10 py-1.5 bg-white'>
+            <div className='flex justify-between px-10 py-3 items-center w-[100%] bg-white h-[12vh]'>
                 <div >
                     <Link to="/" className='flex border-[2px] border-black items-center rounded'>
                         <span className='font-bold my-2 px-1'>Daud's</span>
@@ -43,19 +43,17 @@ export default function Navbar() {
 
                     </Link>
                 </div>
-                <div className='md:flex flex-row gap-6 hidden'>
+                <div className='md:flex flex-row gap-6 hidden items-center'>
                     {
                         nav_items.map((items, i) => {
-                            return <NavLink to={items.link} key={i}><li className='hover:cursor-pointer font-bold list-none'>{items.namez}</li></NavLink>
+                            return <a href={items.link} key={i}><li className='hover:cursor-pointer font-semibold list-none hover:text-blue-500'>{items.namez}</li></a>
                         })
                     }
+
+                    <a download="Daud_Mir's Resume" className='ml-8'><button className=' text-[10px] bg-white text-black border-[2px] border-black rounded hover:scale-105 duration-200 font-bold py-2 px-2 animate-pulse hover:animate-none  hover:text-blue-600 hover:border-blue-600' >Download Resume</button></a>
                 </div>
-                <div className='md:flex gap-4 hidden'>
-                    <a href="https://linkedin.com/in/ daud-mir-180902294" target='blank'> <SiLinkedin className='w-7 h-7 text-blue-600 hover:cursor-pointer hover:scale-110 duration-200' /></a>
-                    <FaWhatsapp className='w-7 h-7 text-green-700 hover:cursor-pointer hover:scale-110 duration-200' />
-                    <a href="https://github.com/Daud2002" target='blank'><BsGithub className='w-7 h-7 hover:cursor-pointer hover:scale-110 duration-200' /></a>
-                </div>
-                <div className='md:hidden flex'>
+
+                <div className='md:hidden flex sticky'>
 
                     {
                         menu ? <div className=' flex-wrap'>
@@ -69,18 +67,23 @@ export default function Navbar() {
             </div>
             {
                 menu && (
-                    <div className='flex flex-row py-4 bg-white h-full'>
-                        <div className=' flex flex-col basis-full gap-4 pl-4'>
-                            {
-                                nav_items.map((items, i) => {
-                                    return <NavLink to={items.link} key={i}><li className='hover:cursor-pointer font-bold list-none text-[20px]'>{items.namez}</li></NavLink>
-                                })
-                            }
+                    <div className='flex flex-col'>
+                        <div className='flex flex-row py-4 bg-white h-full transition-all duration-[6000ms] ease-in-out transform sticky'>
+                            <div className=' flex flex-col basis-full gap-4 pl-4'>
+                                {
+                                    nav_items.map((items, i) => {
+                                        return <a href={items.link} key={i}><li className='hover:cursor-pointer font-bold list-none text-[20px]'>{items.namez}</li></a>
+                                    })
+                                }
+                            </div>
+                            <div className='flex flex-col justify-center gap-6 mr-4'>
+                                <a href="https://www.linkedin.com/in/daud-mir-180902294/" target='blank'> <SiLinkedin className='w-8 h-8 text-blue-600 hover:cursor-pointer hover:scale-110 duration-200' /></a>
+                                <FaWhatsapp className='w-8 h-8 text-green-700 hover:cursor-pointer hover:scale-110 duration-200' />
+                                <a href="https://github.com/Daud2002" target='blank'><BsGithub className='w-8 h-8 hover:cursor-pointer hover:scale-110 duration-200' /></a>
+                            </div>
                         </div>
-                        <div className='flex flex-col justify-center gap-6 mr-4'>
-                            <a href="https://linkedin.com/in/ daud-mir-180902294" target='blank'> <SiLinkedin className='w-8 h-8 text-blue-600 hover:cursor-pointer hover:scale-110 duration-200' /></a>
-                            <FaWhatsapp className='w-8 h-8 text-green-700 hover:cursor-pointer hover:scale-110 duration-200' />
-                            <a href="https://github.com/Daud2002" target='blank'><BsGithub className='w-8 h-8 hover:cursor-pointer hover:scale-110 duration-200' /></a>
+                        <div className='flex justify-center'>
+                        <a download="Daud_Mir's Resume" className='ml-8'><button className=' text-[10px] bg-white text-black border-[2px] border-black rounded hover:scale-105 duration-200 font-bold py-2 px-2 animate-pulse hover:animate-none hover:bg-black hover:text-white' >Download Resume</button></a>
                         </div>
                     </div>
                 )

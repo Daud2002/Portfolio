@@ -1,0 +1,54 @@
+.hero-img {
+    animation: morph 8s ease-in-out infinite;
+    background-image: url('./../../assets/myimg.jpg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid #2d2e32;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    height: 20rem;
+    position: relative;
+    transition: all 1s ease-in-out;
+    width: 20rem;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 20% 80% 60% 20% / 40% 60% 20% 80%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+
+.floatings{
+    animation: float 5s linear infinite;
+}
+
+.floatings:hover{
+    animation: none;
+}
+
+@keyframes float{
+    0% {
+        transform:translateY(0);
+    }
+    25%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    75%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

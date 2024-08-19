@@ -1,26 +1,115 @@
 import React from 'react'
-import myimg from '../../assets/img.png'
-import Resume from "../../File/Daud_Mir.pdf"
+import { motion } from 'framer-motion'
+import './LandingPage.css'
+import { SiLinkedin } from "react-icons/si";
+import { BsGithub } from "react-icons/bs";
 
 export default function Landingpage() {
 
-    return (
-        <div className='flex md:flex-row flex-col-reverse md:gap-0 gap-20'>
-            <div className='flex items-center justify-center flex-col gap-4 md:w-[50%] md:shadow-none shadow-2xl mx-6 px-4 pb-4 mb-4 border-black md:border-none border-[1px] rounded'>
-                <div className='text-[50px] font-semibold md:w-[70%] w-[100%]'>
-                    Hi, I am Daud Mir
+    const skill_logo = [
+        {
+            link: "https://skillicons.dev/icons?i=html",
+            name: "HTML 5"
+        },
+        {
+            link: "https://skillicons.dev/icons?i=css",
+            name: "CSS 3"
+        },
+        {
+            link: "https://skillicons.dev/icons?i=js",
+            name: "JavaScript"
+        },
+        {
+            link: "https://skillicons.dev/icons?i=react",
+            name: "React JS"
+        },
+        {
+            link: "https://skillicons.dev/icons?i=tailwind",
+            name: "Tailwind"
+        },
+        {
+            link: "https://skillicons.dev/icons?i=expressjs",
+            name: "Express"
+        },
+        {
+            link: "https://skillicons.dev/icons?i=mongo",
+            name: "MongoDB"
+        },
+
+    ]
+
+    return (<>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+        >
+            <div className='flex md:flex-row flex-col-reverse md:gap-0 gap-20 items-center justify-center h-[90vh] md:mt-0 mt-52'>
+                <div className='flex items-end justify-end flex-col gap-4 md:w-[50%] px-4 pb-4 mb-4 rounded'>
+                    <div className=' md:w-[80%] w-[100%] opacity-75 flex flex-col md:gap-4 gap-8 items-center'>
+                        <span className='md:text-[3.2rem] text-[2.5rem] font-bold text-center md:text-left'>Front-End React Developer👋🏻</span>
+                        <div className='w-[90%] md:w-[100%] text-center md:text-justify'>
+                            Hi, I'm Daud Mir. A passionate Front-end React Developer based in Gujrat, Pakistan. 📍</div>
+                        <div className='md:flex gap-4 hidden'>
+                        </div>
+                        <div className='flex gap-6 md:justify-start md:w-[100%]'>
+                            <a href="https://www.linkedin.com/in/daud-mir-180902294/" target='blank'> <SiLinkedin className='w-7 h-7 text-blue-600 hover:cursor-pointer hover:scale-110 duration-200' /></a>          
+                            <a href="https://github.com/Daud2002" target='blank'><BsGithub className='w-7 h-7 hover:cursor-pointer hover:scale-110 duration-200' /></a>
+                        </div>
+                    </div>
+
                 </div>
-                <div className='md:w-[70%] w-[100%]'>
-                    I am a passionate web developer Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, commodi asperiores. Vel officia at reprehenderit minus laudantium eligendi, magnam itaque?
-                </div>
-                <div className='flex flex-row justify-around w-[100%] mt-8 gap-4'>
-                    <a href={Resume} download="Daud_Mir's Resume"><button className='bg-white text-black border-[2px] border-black px-4 py-3 rounded hover:scale-110 duration-200 font-bold' >Download Resume</button></a>
-                    <button className='bg-black text-white px-4 py-3 rounded hover:scale-110 duration-200 font-semibold border-[2px] border-black'>Contact Now</button>
+                <div className='flex items-center justify-center md:w-[50%] w-[100%] p-4'>
+                    <div className='hero-img'></div>
                 </div>
             </div>
-            <div className='flex items-center justify-center md:w-[50%] w-[100%] p-4'>
-                <img src={myimg} alt="" className=' drop-shadow-red' />
+            <div className='flex md:flex-row flex-col justify-center md:items-end items-center gap-8 md:mt-0 mt-40 md:mb-16'>
+                <div className=' font-semibold text-[1.5rem] flex md:flex-row flex-col gap-6 items-center'>
+                    <span>Tech Stack</span>
+                    <hr className=' bg-black md:h-[5vh] md:w-[2px] h-[0.5vh] w-[80px] md:opacity-60' />
+                </div>
+                <div className='md:flex flex-row gap-4 hidden'>
+                    {
+                        skill_logo.map((item, i) => {
+                            return (
+                                <div className=' flex flex-col gap-3 items-center group hover:duration-1000 group floatings'>
+                                    <p className='font-semibold shadow-2xl shadow-black py-1 invisible text-[10px] group-hover:visible rounded-lg'>{item.name}</p>
+                                    <img src={item.link} alt="" className=' hover:scale-110 duration-200 hover:cursor-pointer w-[50px] overflow-auto' />
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+                <div className='md:hidden block'>
+                    <div className='flex justify-center gap-4'>
+                        {
+                            skill_logo.slice(0, 4).map((items, i) => {
+                                return (
+                                    <div className=' flex flex-col gap-3 items-center group hover:duration-1000 group floatings'>
+                                        <p className='font-semibold shadow-2xl shadow-black py-1 invisible text-[10px] group-hover:visible rounded-lg'>{items.name}</p>
+                                        <img src={items.link} alt="" className=' hover:scale-110 duration-200 hover:cursor-pointer w-[50px] overflow-auto' />
+                                    </div>
+                                )
+                            })
+
+                        }
+                    </div>
+                    <div className='flex justify-center gap-4'>
+                    {
+                            skill_logo.slice(4).map((items, i) => {
+                                return (
+                                    <div className=' flex flex-col gap-3 items-center group hover:duration-1000 group floatings'>
+                                        <p className='font-semibold shadow-2xl shadow-black py-1 invisible text-[10px] group-hover:visible rounded-lg'>{items.name}</p>
+                                        <img src={items.link} alt="" className=' hover:scale-110 duration-200 hover:cursor-pointer w-[50px] overflow-auto' />
+                                    </div>
+                                )
+                            })
+
+                        }
+                    </div>
+                </div>
             </div>
-        </div>
+        </motion.div>
+    </>
     )
 }
