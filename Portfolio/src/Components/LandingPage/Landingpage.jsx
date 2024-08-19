@@ -44,7 +44,7 @@ export default function Landingpage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
         >
-            <div className='flex md:flex-row flex-col-reverse md:gap-0 gap-20 items-center justify-center h-[90vh] md:mt-0 mt-52'>
+            <div className='flex md:flex-row flex-col-reverse md:gap-0 gap-20 items-center justify-center h-[90vh] md:mt-0 mt-32'>
                 <div className='flex items-end justify-end flex-col gap-4 md:w-[50%] px-4 pb-4 mb-4 rounded'>
                     <div className=' md:w-[80%] w-[100%] opacity-75 flex flex-col md:gap-4 gap-8 items-center'>
                         <span className='md:text-[3.2rem] text-[2.5rem] font-bold text-center md:text-left'>Front-End React Developer👋🏻</span>
@@ -53,7 +53,7 @@ export default function Landingpage() {
                         <div className='md:flex gap-4 hidden'>
                         </div>
                         <div className='flex gap-6 md:justify-start md:w-[100%]'>
-                            <a href="https://www.linkedin.com/in/daud-mir-180902294/" target='blank'> <SiLinkedin className='w-7 h-7 text-blue-600 hover:cursor-pointer hover:scale-110 duration-200' /></a>          
+                            <a href="https://www.linkedin.com/in/daud-mir-180902294/" target='blank'> <SiLinkedin className='w-7 h-7 text-blue-600 hover:cursor-pointer hover:scale-110 duration-200' /></a>
                             <a href="https://github.com/Daud2002" target='blank'><BsGithub className='w-7 h-7 hover:cursor-pointer hover:scale-110 duration-200' /></a>
                         </div>
                     </div>
@@ -63,53 +63,77 @@ export default function Landingpage() {
                     <div className='hero-img'></div>
                 </div>
             </div>
-            <div className='flex md:flex-row flex-col justify-center md:items-end items-center gap-8 md:mt-0 mt-40 md:mb-16'>
-                <div className=' font-semibold text-[1.5rem] flex md:flex-row flex-col gap-6 items-center'>
-                    <span>Tech Stack</span>
-                    <hr className=' bg-black md:h-[5vh] md:w-[2px] h-[0.5vh] w-[80px] md:opacity-60' />
-                </div>
-                <div className='md:flex flex-row gap-4 hidden'>
-                    {
-                        skill_logo.map((item, i) => {
-                            return (
-                                <div className=' flex flex-col gap-3 items-center group hover:duration-1000 group floatings'>
-                                    <p className='font-semibold shadow-2xl shadow-black py-1 invisible text-[10px] group-hover:visible rounded-lg'>{item.name}</p>
-                                    <img src={item.link} alt="" className=' hover:scale-110 duration-200 hover:cursor-pointer w-[50px] overflow-auto' />
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-                <div className='md:hidden block'>
-                    <div className='flex justify-center gap-4'>
+            <div className='flex md:flex-row flex-col justify-center md:items-end items-center gap-8 md:mt-0 mt-40 mb-16'>
+                <motion.div
+                    initial={{ translateX: '-100%' }}
+                    whileInView={{ translateX: '0%' }}
+                    transition={{ duration: 0.5, ease: "linear" }}
+                >
+                    <div className=' font-semibold text-[1.5rem] flex md:flex-row flex-col gap-6 items-center'>
+                        <span>Tech Stack</span>
+                        <hr className=' bg-black md:h-[5vh] md:w-[2px] h-[0.5vh] w-[80px] md:opacity-60' />
+                    </div>
+                </motion.div>
+                <motion.div
+                    initial={{ translateX: '50%' }}
+                    whileInView={{ translateX: '0%' }}
+                    transition={{ duration: 0.5, ease: "linear" }}>
+
+                    <div className='md:flex flex-row gap-4 hidden'>
                         {
-                            skill_logo.slice(0, 4).map((items, i) => {
+                            skill_logo.map((item, i) => {
                                 return (
-                                    <div className=' flex flex-col gap-3 items-center group hover:duration-1000 group floatings'>
-                                        <p className='font-semibold shadow-2xl shadow-black py-1 invisible text-[10px] group-hover:visible rounded-lg'>{items.name}</p>
-                                        <img src={items.link} alt="" className=' hover:scale-110 duration-200 hover:cursor-pointer w-[50px] overflow-auto' />
+                                    <div className=' flex flex-col gap-3 items-center group hover:duration-1000 group floatings' key={i}>
+                                        <p className='font-semibold shadow-2xl shadow-black py-1 invisible text-[10px] group-hover:visible rounded-lg'>{item.name}</p>
+                                        <img src={item.link} alt="" className=' hover:scale-110 duration-200 hover:cursor-pointer w-[50px] overflow-auto' />
                                     </div>
                                 )
                             })
-
                         }
                     </div>
-                    <div className='flex justify-center gap-4'>
-                    {
-                            skill_logo.slice(4).map((items, i) => {
-                                return (
-                                    <div className=' flex flex-col gap-3 items-center group hover:duration-1000 group floatings'>
-                                        <p className='font-semibold shadow-2xl shadow-black py-1 invisible text-[10px] group-hover:visible rounded-lg'>{items.name}</p>
-                                        <img src={items.link} alt="" className=' hover:scale-110 duration-200 hover:cursor-pointer w-[50px] overflow-auto' />
-                                    </div>
-                                )
-                            })
+                </motion.div>
+                <div className='md:hidden block'>
+                    <motion.div
+                        initial={{ translateY: '-50%' }}
+                        whileInView={{ translateY: '0%' }}
+                        transition={{ duration: 0.5, ease: "linear" }}
+                    >
+                        <div className='flex justify-center gap-4'>
+                            {
+                                skill_logo.slice(0, 4).map((items, i) => {
+                                    return (
+                                        <div className=' flex flex-col gap-3 items-center group hover:duration-1000 group floatings' key={i}>
+                                            <p className='font-semibold shadow-2xl shadow-black py-1 invisible text-[10px] group-hover:visible rounded-lg'>{items.name}</p>
+                                            <img src={items.link} alt="" className=' hover:scale-110 duration-200 hover:cursor-pointer w-[50px] overflow-auto' />
+                                        </div>
+                                    )
+                                })
 
-                        }
-                    </div>
+                            }
+                        </div>
+                    </motion.div>
+                    <motion.div
+                        initial={{ translateY: '50%' }}
+                        whileInView={{ translateY: '0%' }}
+                        transition={{ duration: 0.5, ease: "linear" }}
+                    >
+                        <div className='flex justify-center gap-4'>
+                            {
+                                skill_logo.slice(4).map((items, i) => {
+                                    return (
+                                        <div className=' flex flex-col gap-3 items-center group hover:duration-1000 group floatings' key={i}>
+                                            <p className='font-semibold shadow-2xl shadow-black py-1 invisible text-[10px] group-hover:visible rounded-lg'>{items.name}</p>
+                                            <img src={items.link} alt="" className=' hover:scale-110 duration-200 hover:cursor-pointer w-[50px] overflow-auto' />
+                                        </div>
+                                    )
+                                })
+
+                            }
+                        </div>
+                    </motion.div>
                 </div>
             </div>
-        </motion.div>
+        </motion.div >
     </>
     )
 }

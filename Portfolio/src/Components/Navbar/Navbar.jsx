@@ -5,6 +5,9 @@ import { BsGithub } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import { HiBars3 } from "react-icons/hi2";
 import { RxCross1 } from "react-icons/rx";
+import {motion} from 'framer-motion'
+import resume from '../../File/Daud_Mir.pdf'
+
 
 export default function Navbar() {
 
@@ -32,6 +35,9 @@ export default function Navbar() {
         }
     ]
 
+    const phoneNumber = '+923097119974';
+    const message = 'Hello, I visited your portfolio & want to talk to you.';
+  
 
     return (
         <div className='flex-wrap border-[1px] shadow-md sticky top-0 z-10 py-1.5 bg-white'>
@@ -50,7 +56,7 @@ export default function Navbar() {
                         })
                     }
 
-                    <a download="Daud_Mir's Resume" className='ml-8'><button className=' text-[10px] bg-white text-black border-[2px] border-black rounded hover:scale-105 duration-200 font-bold py-2 px-2 animate-pulse hover:animate-none  hover:text-blue-600 hover:border-blue-600' >Download Resume</button></a>
+                    <a href={resume} download="Daud_Mir's Resume" className='ml-8'><button className=' text-[10px] bg-white text-black border-[2px] border-black rounded hover:scale-105 duration-200 font-bold py-2 px-2 animate-pulse hover:animate-none  hover:text-blue-600 hover:border-blue-600' >Download Resume</button></a>
                 </div>
 
                 <div className='md:hidden flex sticky'>
@@ -58,7 +64,6 @@ export default function Navbar() {
                     {
                         menu ? <div className=' flex-wrap'>
                             <RxCross1 className='w-10 h-10 duration-1000' onClick={() => setMenu(!menu)} />
-
                         </div>
                             :
                             <HiBars3 className='w-10 h-10 duration-1000' onClick={() => setMenu(!menu)} />
@@ -67,25 +72,31 @@ export default function Navbar() {
             </div>
             {
                 menu && (
-                    <div className='flex flex-col'>
+                    <motion.div
+                    transition={{duration: 2, ease: "linear"}}
+                     className='flex flex-col transition-all duration-1000 w-full'>
                         <div className='flex flex-row py-4 bg-white h-full transition-all duration-[6000ms] ease-in-out transform sticky'>
-                            <div className=' flex flex-col basis-full gap-4 pl-4'>
+                            <motion.div
+                            initial ={{translateX : "50%", opacity : 0.1}}
+                            whileInView={{translateX : "0%", opacity: 1}}
+                            transition={{duration:0.5, ease: "linear"}}
+                             className=' flex flex-col basis-full gap-4 pl-4'>
                                 {
                                     nav_items.map((items, i) => {
                                         return <a href={items.link} key={i}><li className='hover:cursor-pointer font-bold list-none text-[20px]'>{items.namez}</li></a>
                                     })
                                 }
-                            </div>
+                            </motion.div>
                             <div className='flex flex-col justify-center gap-6 mr-4'>
                                 <a href="https://www.linkedin.com/in/daud-mir-180902294/" target='blank'> <SiLinkedin className='w-8 h-8 text-blue-600 hover:cursor-pointer hover:scale-110 duration-200' /></a>
-                                <FaWhatsapp className='w-8 h-8 text-green-700 hover:cursor-pointer hover:scale-110 duration-200' />
+                               <a href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}><FaWhatsapp className='w-8 h-8 text-green-700 hover:cursor-pointer hover:scale-110 duration-200' /></a>
                                 <a href="https://github.com/Daud2002" target='blank'><BsGithub className='w-8 h-8 hover:cursor-pointer hover:scale-110 duration-200' /></a>
                             </div>
                         </div>
                         <div className='flex justify-center'>
-                        <a download="Daud_Mir's Resume" className='ml-8'><button className=' text-[10px] bg-white text-black border-[2px] border-black rounded hover:scale-105 duration-200 font-bold py-2 px-2 animate-pulse hover:animate-none hover:bg-black hover:text-white' >Download Resume</button></a>
+                        <a href={resume} download="Daud_Mir's Resume" className='ml-8'><button className=' text-[10px] bg-white text-black border-[2px] border-black rounded hover:scale-105 duration-200 font-bold py-2 px-2 animate-pulse hover:animate-none hover:bg-black hover:text-white' >Download Resume</button></a>
                         </div>
-                    </div>
+                    </motion.div>
                 )
             }
         </div>
