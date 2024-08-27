@@ -1,8 +1,9 @@
 import React from 'react'
-import constimg from '../../assets/developer.jpg'
-import rounded from '../../assets/rounded.png'
+import constimg from '../../assets/images/developer.jpg'
+import rounded from '../../assets/images/rounded.png'
 import './About.css'
-import working from '../../assets/working-img.png'
+import working from '../../assets/images/working-img.png'
+
 import { motion } from 'framer-motion'
 
 

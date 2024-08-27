@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import About from './Components/About/About.jsx'
 import Contact from './Components/Contact/Contact.jsx'
 import Landingpage from './Components/LandingPage/Landingpage.jsx'
-import Projects from './Components/Portfolio/Projects.jsx'
+import Projects from './Components/Projects/Projects.jsx'
 
 const router = createBrowserRouter([
   {

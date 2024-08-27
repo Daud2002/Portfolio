@@ -10,7 +10,7 @@ export default function Contact() {
 
 
   return (
-    <div className='flex flex-col gap-4 md:ml-32 md:my-32 my-16 justify-center items-center md:items-start' id='contact'>
+    <div className='flex flex-col gap-4 md:ml-32 justify-center items-center md:items-start' id='contact'>
       <motion.div
         initial={{ translateX: "-100%" }}
         whileInView={{ translateX: "0%" }}
