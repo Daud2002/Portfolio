@@ -1,0 +1,18 @@
+/* .hire-animation{
+    animation: rounded 2s infinite;
+    cursor: pointer;
+}
+.hire-animation:hover{
+    animation: none;
+}
+@keyframes rounded{
+    0%{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.5);
+    }
+} */

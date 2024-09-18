@@ -31,7 +31,8 @@ export default function () {
             <h1 className=' font-bold text-blue-700 text-[20px]'>ABOUT ME</h1>
             <h2 className='flex flex-col gap-1 items-center md:items-start'>
               <div className='font-bold text-[20px] opacity-80'>Front-end Developer</div>
-              <div className='font-bold text-[20px] opacity-80'>based in Gujrat, Pakistan</div><span className='hidden md:block'>📍</span>
+              <div className='font-bold text-[20px] opacity-80'>based in Gujrat, Pakistan📍</div>
+              
               <div className='flex flex-col gap-3 mt-4 justify-center items-center text-center md:text-left'>
                 <div>Hey, my name is Daud Mir, and I'm a Frontend Developer. My passion is to create and develop a clean UI/UX for my users.</div>
                 <div>My main stack currently is ReactJS in combination with Tailwind CSS.</div>

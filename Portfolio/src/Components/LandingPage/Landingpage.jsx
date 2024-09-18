@@ -49,7 +49,7 @@ export default function Landingpage() {
                     <div className=' md:w-[80%] w-[100%] opacity-75 flex flex-col md:gap-4 gap-8 items-center'>
                         <span className='md:text-[3.2rem] text-[2.5rem] font-bold text-center md:text-left'>Front-End React Developer👋🏻</span>
                         <div className='w-[90%] md:w-[100%] text-center md:text-justify'>
-                            Hi, I'm Daud Mir. A passionate Front-end React Developer based in Gujrat, Pakistan. 📍</div>
+                            Hi, I'm Daud Mir. A self-taught passionate Front-end React Developer based in Gujrat, Pakistan. 📍</div>
                         <div className='md:flex gap-4 hidden'>
                         </div>
                         <div className='flex gap-6 md:justify-start md:w-[100%]'>
