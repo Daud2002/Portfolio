@@ -28,10 +28,10 @@ export default function Projects() {
           })
         }
       </div>
-      <div className='flex'>
+      {/* <div className='flex'>
         <div className='rotating-span shadow-2xl shadow-black backdrop-hue-rotate-90'>Do you have projects?<div className='bg-black text-white py-9 px-6 inline rounded-[50%] font-bold hire-animation'>Hire Me</div></div>
         
-      </div>
+      </div> */}
     </div>
   )
 }

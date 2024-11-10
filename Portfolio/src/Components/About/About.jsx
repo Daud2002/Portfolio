@@ -34,8 +34,7 @@ export default function () {
               <div className='font-bold text-[20px] opacity-80'>based in Gujrat, Pakistan📍</div>
               
               <div className='flex flex-col gap-3 mt-4 justify-center items-center text-center md:text-left'>
-                <div>Hey, my name is Daud Mir, and I'm a Frontend Developer. My passion is to create and develop a clean UI/UX for my users.</div>
-                <div>My main stack currently is ReactJS in combination with Tailwind CSS.</div>
+                <div className='text-justify'>Hi, I'm Daud Mir, a Front-end Developer from Gujrat, Pakistan, specializing in ReactJS and Tailwind CSS. I’m passionate about building responsive, user-friendly web applications with clean and intuitive UI/UX designs. My goal is to combine functionality and aesthetics to create seamless digital experiences.</div>
               </div>
             </h2>
           </div>

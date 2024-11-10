@@ -70,38 +70,35 @@ export default function Navbar() {
                     }
                 </div>
             </div>
-            {
-                menu && (
-                    <div className='flex justify-end w-full'>
-                        <motion.div
-                            transition={{ duration: 2, ease: "linear" }}
-                            className='flex flex-col transition-all duration-1000 w-[50%] bg-white border-[2px] border-[#ededed] border-t-0'>
-                            <div className='flex flex-row py-4 bg-white h-full transition-all duration-[6000ms] ease-in-out transform sticky'>
-                                <motion.div
-                                    initial={{ translateX: "50%", opacity: 0.1 }}
-                                    whileInView={{ translateX: "0%", opacity: 1 }}
-                                    transition={{ duration: 0.5, ease: "linear" }}
-                                    className=' flex flex-col basis-full gap-4 pl-4'>
-                                    {
-                                        nav_items.map((items, i) => {
-                                            return <a href={items.link} key={i}><li className='hover:cursor-pointer font-bold list-none text-[15px]' onClick={() => setMenu(false)}>{items.namez}</li></a>
-                                        })
-                                    }
-                                </motion.div>
-                                <div className='flex flex-col justify-center gap-6 mr-4'>
-                                    <a href="https://www.linkedin.com/in/daud-mir-180902294/" target='blank'> <SiLinkedin className='w-8 h-8 text-blue-600 hover:cursor-pointer hover:scale-110 duration-200' /></a>
-                                    <a href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}><FaWhatsapp className='w-8 h-8 text-green-700 hover:cursor-pointer hover:scale-110 duration-200' /></a>
-                                    <a href="https://github.com/Daud2002" target='blank'><BsGithub className='w-8 h-8 hover:cursor-pointer hover:scale-110 duration-200' /></a>
-                                </div>
-                            </div>
-                            <div className='flex justify-center pb-5'>
-                                <a href={resume} download="Daud_Mir's Resume" className='ml-8'><button className=' text-[10px] bg-white text-black border-[2px] border-black rounded hover:scale-105 duration-200 font-bold py-2 px-2 animate-pulse hover:animate-none hover:bg-black hover:text-white' >Download Resume</button></a>
-                            </div>
-                        </motion.div>
-                    </div>
 
-                )
-            }
+
+            <div className={`flex w-full absolute ${menu ? 'left-0':'-left-96'} duration-300`}>
+                <motion.div
+                    transition={{ duration: 2, ease: "linear" }}
+                    className='flex flex-col transition-all duration-1000 w-[70%] h-[50vh] bg-white border-[2px] border-[#ededed] border-t-0'>
+                    <div className='flex flex-row py-4 bg-white h-full transition-all duration-[6000ms] ease-in-out transform sticky items-center'>
+                        <motion.div
+                            initial={{ translateX: "50%", opacity: 0.1 }}
+                            whileInView={{ translateX: "0%", opacity: 1 }}
+                            transition={{ duration: 0.5, ease: "linear" }}
+                            className=' flex flex-col basis-full gap-8 pl-4'>
+                            {
+                                nav_items.map((items, i) => {
+                                    return <a href={items.link} key={i}><li className='hover:cursor-pointer font-bold list-none text-[15px]' onClick={() => setMenu(false)}>{items.namez}</li></a>
+                                })
+                            }
+                        </motion.div>
+                        <div className='flex flex-col justify-center gap-6 mr-4'>
+                            <a href="https://www.linkedin.com/in/daud-mir-180902294/" target='blank'> <SiLinkedin className='w-8 h-8 text-blue-600 hover:cursor-pointer hover:scale-110 duration-200' /></a>
+                            <a href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}><FaWhatsapp className='w-8 h-8 text-green-700 hover:cursor-pointer hover:scale-110 duration-200' /></a>
+                            <a href="https://github.com/Daud2002" target='blank'><BsGithub className='w-8 h-8 hover:cursor-pointer hover:scale-110 duration-200' /></a>
+                        </div>
+                    </div>
+                    <div className='flex justify-center pb-5'>
+                        <a href={resume} download="Daud_Mir's Resume" className='ml-8'><button className=' text-[10px] bg-white text-black border-[2px] border-black rounded hover:scale-105 duration-200 font-bold py-2 px-2 animate-pulse hover:animate-none hover:bg-black hover:text-white' >Download Resume</button></a>
+                    </div>
+                </motion.div>
+            </div>
         </div>
     )
 }
