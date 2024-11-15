@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaExternalLinkAlt } from "react-icons/fa";
 import projects from '../../assets/Data/Projects_Data.jsx';
-import './projects.css'
+import './Projects.css'
 
 
 export default function Projects() {
