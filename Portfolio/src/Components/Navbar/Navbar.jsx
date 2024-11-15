@@ -72,7 +72,7 @@ export default function Navbar() {
             </div>
 
 
-            <div className={`flex w-full absolute ${menu ? 'left-0':'-left-96'} duration-300`}>
+            {menu && <div className={`flex w-full absolute ${menu ? 'left-0':'-left-96'} duration-300`}>
                 <motion.div
                     transition={{ duration: 2, ease: "linear" }}
                     className='flex flex-col transition-all duration-1000 w-[70%] h-[50vh] bg-white border-[2px] border-[#ededed] border-t-0'>
@@ -98,7 +98,7 @@ export default function Navbar() {
                         <a href={resume} download="Daud_Mir's Resume" className='ml-8'><button className=' text-[10px] bg-white text-black border-[2px] border-black rounded hover:scale-105 duration-200 font-bold py-2 px-2 animate-pulse hover:animate-none hover:bg-black hover:text-white' >Download Resume</button></a>
                     </div>
                 </motion.div>
-            </div>
+            </div>}
         </div>
     )
 }
