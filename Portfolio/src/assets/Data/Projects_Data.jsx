@@ -1,16 +1,16 @@
 import weather from '../images/weather.png'
 import blogapp from '../images/blogg_app.png'
 import foodapp from '../images/Foodapp.png'
-import socialapp from '../images/socialapp.png'
+import ahmasoft from '../images/Ahmasoft.png'
 import carental from '../images/car-rental.png'
 
 
 const projects = [
     {
-      name: 'Social Welfare App',
-      des: 'Social welfare website is still under developemenet. This website will specifically use by a welfare facebook page. It will show their city news in categories while there is also an option to donate screen which shows the account details.',
-      link: 'https://humansofjpj.vercel.app/',
-      image: socialapp
+      name: 'Ahmasoft',
+      des: 'Ahmasoft is a startup based website designed to showcase company portfolio to their clients. It uses framer motion for some styling and is made using ReactJS & Tailwind css.',
+      link: 'https://ahmasoft.com/',
+      image: ahmasoft
     },
     {
       name: 'Car Rental App',
