@@ -20,7 +20,17 @@ export default function Projects() {
                   <div className='md:w-[60%] w-[90%] flex flex-col md:items-start items-center gap-4'>
                     <h1 className='font-bold opacity-70 text-[25px]'>{items.name}</h1>
                     <p className='font-light text-[15px] text-justify'>{items.des}</p>
-                    <a href={items.link} target='blank'><button className='flex flex-row items-center gap-2 text-[10px]'><FaExternalLinkAlt className='bg-white text-[20px] text-blue-600' /> </button></a>
+                    <div className='flex flex-row gap-4'>
+                      {items.link.map((links, index) => {
+                        return (
+                          <div className="relative flex flex-row gap-4 group" key={index}>
+                            <img src={links.link} alt="" className="w-8 h-8" />
+                            <span className="absolute bottom-full mb-1 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 whitespace-nowrap z-10">
+                              {links.name}
+                            </span>
+                          </div>
+                        )})}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -28,10 +38,6 @@ export default function Projects() {
           })
         }
       </div>
-      {/* <div className='flex'>
-        <div className='rotating-span shadow-2xl shadow-black backdrop-hue-rotate-90'>Do you have projects?<div className='bg-black text-white py-9 px-6 inline rounded-[50%] font-bold hire-animation'>Hire Me</div></div>
-        
-      </div> */}
     </div>
   )
 }

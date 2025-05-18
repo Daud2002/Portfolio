@@ -16,16 +16,24 @@ export default function Landingpage() {
             name: "CSS 3"
         },
         {
+            link: "https://skillicons.dev/icons?i=tailwindcss",
+            name: "Tailwind CSS"
+        },
+        {
             link: "https://skillicons.dev/icons?i=js",
             name: "JavaScript"
+        },
+        {
+            link: "https://skillicons.dev/icons?i=typescript",
+            name: "TypeScript"
         },
         {
             link: "https://skillicons.dev/icons?i=react",
             name: "React JS"
         },
         {
-            link: "https://skillicons.dev/icons?i=tailwind",
-            name: "Tailwind"
+            link: "https://skillicons.dev/icons?i=nextjs",
+            name: "Next JS"
         },
         {
             link: "https://skillicons.dev/icons?i=expressjs",
@@ -35,7 +43,10 @@ export default function Landingpage() {
             link: "https://skillicons.dev/icons?i=mongo",
             name: "MongoDB"
         },
-
+        {
+            link: "https://skillicons.dev/icons?i=git",
+            name: "Git"
+        }
     ]
 
     return (<>
@@ -47,9 +58,9 @@ export default function Landingpage() {
             <div className='flex md:flex-row flex-col-reverse md:gap-0 gap-20 items-center justify-center h-[90vh] md:mt-0 mt-32'>
                 <div className='flex items-end justify-end flex-col gap-4 md:w-[50%] px-4 pb-4 mb-4 rounded'>
                     <div className=' md:w-[80%] w-[100%] opacity-75 flex flex-col md:gap-4 gap-8 items-center'>
-                        <span className='md:text-[3.2rem] text-[2.5rem] font-bold text-center md:text-left'>Front-End React Developer👋🏻</span>
+                        <div className='md:text-[2.8rem] text-[2.5rem] font-bold'>Front-End Developer 👋🏻</div>
                         <div className='w-[90%] md:w-[100%] text-center md:text-justify'>
-                            Hi, I'm Daud Mir. A self-taught passionate Front-end React Developer based in Gujrat, Pakistan. 📍</div>
+                            Hi, I'm Daud Mir. A self-taught passionate MERN stack Developer with a major focus on frontend based in Lahore, Pakistan. 📍</div>
                         <div className='md:flex gap-4 hidden'>
                         </div>
                         <div className='flex gap-6 md:justify-start md:w-[100%]'>

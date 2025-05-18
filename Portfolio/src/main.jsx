@@ -7,6 +7,7 @@ import About from './Components/About/About.jsx'
 import Contact from './Components/Contact/Contact.jsx'
 import Landingpage from './Components/LandingPage/Landingpage.jsx'
 import Projects from './Components/Projects/Projects.jsx'
+import Experience from './Components/Experience/Experience.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <About />
+      },
+      {
+        path: 'experience',
+        element: <Experience />
       },
       {
         path: 'contact',
