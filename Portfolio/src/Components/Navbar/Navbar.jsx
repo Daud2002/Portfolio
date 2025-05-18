@@ -28,7 +28,10 @@ export default function Navbar() {
             namez: 'Projects',
             link: '#projects'
         },
-
+        {
+            namez: 'Experience',
+            link: '#experience'
+        },
         {
             namez: 'Contact',
             link: '#contact'

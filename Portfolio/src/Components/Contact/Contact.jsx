@@ -12,7 +12,7 @@ export default function Contact() {
   return (
     <div className='flex flex-col gap-4 md:ml-32 justify-center items-center md:items-start' id='contact'>
       <motion.div
-        initial={{ translateX: "-100%" }}
+        initial={{ translateX: "-50%" }}
         whileInView={{ translateX: "0%" }}
         transition={{ duration: 0.5, ease: "linear" }}
       >
@@ -27,8 +27,8 @@ export default function Contact() {
       </motion.div>
       <div className='flex md:flex-row flex-col items-center md:gap-16 gap-6 mt-6'>
         <motion.div
-          initial={{ scale: 2 }}
-          whileInView={{ scale: 1 }}
+          initial={{ translateX: "-50%" }}
+          whileInView={{ translateX: "0%" }}
           transition={{ duration: 0.5, ease: "linear" }}
         >
           <a href="mailto:daudmir3@gmail.com" target='blank'>
@@ -37,15 +37,15 @@ export default function Contact() {
               <div className='flex justify-center flex-col items-center md:items-start'>
                 <div className='font-bold text-[20px] opacity-80 '>E-Mail</div>
                 <div className=' opacity-60'>
-                  daudmir3@gmail.com
+                  dev.daudmir@gmail.com
                 </div>
               </div>
             </div>
           </a>
         </motion.div>
         <motion.div
-          initial={{ scale: 2 }}
-          whileInView={{ scale: 1 }}
+          initial={{ translateX: "-50%" }}
+          whileInView={{ translateX: "0%" }}
           transition={{ duration: 0.5, ease: "linear" }}
         >
           <a href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`} target='blank'>

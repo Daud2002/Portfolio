@@ -5,6 +5,7 @@ import About from '../src/Components/About/About.jsx'
 import Projects from './Components/Projects/Projects.jsx'
 import Contact from './Components/Contact/Contact.jsx'
 import Footer from './Components/Footer/Footer.jsx'
+import Experience from './Components/Experience/Experience.jsx'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <Landingpage />
       <About />
+      <Experience />
       <Projects />
       <Contact />
       <Footer />
