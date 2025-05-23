@@ -1,4 +1,3 @@
-// components/ExperienceSection.jsx
 import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
 
@@ -16,9 +15,10 @@ const ExperienceSection = () => {
       },
     ],
     description: [
-      "Focused on frontend development using the MERN stack and Next.js.",
+      "Leading frontend development on enterprise-scale applications using MERN stack and Next.js.",
       "Worked on AI-driven applications, healthcare platforms, and long-term enterprise projects.",
-      "Specialized in debugging and delivering scalable, high-quality solutions.",
+      "Mentored and trained new interns in frontend developement, Git workflows, UI best practices, and project onboarding.",
+      "Continuously optimized code performance, accessibility, and responsiveness across devices.",
       "Converted complex Figma designs into responsive production-ready code.",
     ],
   };

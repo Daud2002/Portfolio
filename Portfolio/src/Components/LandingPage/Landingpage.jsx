@@ -57,18 +57,19 @@ export default function Landingpage() {
         >
             <div className='flex md:flex-row flex-col-reverse md:gap-0 gap-20 items-center justify-center h-[90vh] md:mt-0 mt-32'>
                 <div className='flex items-end justify-end flex-col gap-4 md:w-[50%] px-4 pb-4 mb-4 rounded'>
-                    <div className=' md:w-[80%] w-[100%] opacity-75 flex flex-col md:gap-4 gap-8 items-center'>
-                        <div className='md:text-[2.8rem] text-[2.5rem] font-bold'>Front-End Developer 👋🏻</div>
+                    <div className=' md:w-[80%] w-[100%] opacity-75 flex flex-col md:gap-4 gap-8 items-center text-left'>
+                        <div className='md:text-[2.8rem] text-[2.5rem] font-bold text-justify w-full'>Software Engineer 👋🏻</div>
                         <div className='w-[90%] md:w-[100%] text-center md:text-justify'>
-                            Hi, I'm Daud Mir. A self-taught passionate MERN stack Developer with a major focus on frontend based in Lahore, Pakistan. 📍</div>
-                        <div className='md:flex gap-4 hidden'>
+                            {/* <div>Hi, I'm Daud Mir — a self-taught and passionate Software Engineer specializing in the MERN stack, with a strong focus on building intuitive and responsive frontend experiences.</div>
+                            <div className='mt-2'>I’m currently based in Lahore, Pakistan📍, and I love crafting user-friendly interfaces that bring ideas to life.</div> */}
+
+                            <div>Hi, I'm Daud Mir — a self-taught and passionate Software Engineer specialize in the MERN stack, based in Lahore, Pakistan📍</div>
                         </div>
                         <div className='flex gap-6 md:justify-start md:w-[100%]'>
                             <a href="https://www.linkedin.com/in/daud-mir-180902294/" target='blank'> <SiLinkedin className='w-7 h-7 text-blue-600 hover:cursor-pointer hover:scale-110 duration-200' /></a>
                             <a href="https://github.com/Daud2002" target='blank'><BsGithub className='w-7 h-7 hover:cursor-pointer hover:scale-110 duration-200' /></a>
                         </div>
                     </div>
-
                 </div>
                 <div className='flex items-center justify-center md:w-[50%] w-[100%] p-4'>
                     <div className='hero-img'></div>

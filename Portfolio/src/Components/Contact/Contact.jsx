@@ -30,13 +30,14 @@ export default function Contact() {
           initial={{ translateX: "-50%" }}
           whileInView={{ translateX: "0%" }}
           transition={{ duration: 0.5, ease: "linear" }}
+          // className='border-[1px] rounded-xl shadow-sm shadow-black hover:scale-110 duration-200'
         >
-          <a href="mailto:daudmir3@gmail.com" target='blank'>
-            <div className='flex md:flex-row flex-col items-center hover:text-blue-600 rounded-md md:w-[20%] gap-8 pr-4 py-4 hover:scale-110 duration-200'>
-              <div><IoMailUnreadOutline className='w-12 h-12 shadow-2xl shadow-black rounded-[50%] p-2 text-blue-600' /></div>
+          <a href="mailto:dev.daudmir@gmail.com@gmail.com" target='blank'>
+            <div className='flex md:flex-row flex-col items-center rounded-md md:w-[20%] gap-8 pr-4 py-4'>
+              <div><IoMailUnreadOutline className='w-12 h-12 p-2 text-blue-600' /></div>
               <div className='flex justify-center flex-col items-center md:items-start'>
                 <div className='font-bold text-[20px] opacity-80 '>E-Mail</div>
-                <div className=' opacity-60'>
+                <div className=' opacity-60 hover:text-blue-600'>
                   dev.daudmir@gmail.com
                 </div>
               </div>
@@ -47,13 +48,14 @@ export default function Contact() {
           initial={{ translateX: "-50%" }}
           whileInView={{ translateX: "0%" }}
           transition={{ duration: 0.5, ease: "linear" }}
+          // className='border-[1px] rounded-xl shadow-sm shadow-black hover:scale-110 duration-200'
         >
           <a href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`} target='blank'>
-            <div className='flex md:flex-row flex-col items-center hover:text-blue-600 rounded-md md:w-[20%] gap-8 px-4 py-4 hover:scale-110 duration-200'>
-              <div><FaWhatsapp className='w-12 h-12 shadow-2xl shadow-black rounded-[50%] p-2 text-green-500' /></div>
+            <div className='flex md:flex-row flex-col items-center rounded-md md:w-[20%] gap-8 px-4 py-4'>
+              <div><FaWhatsapp className='w-10 h-10 text-green-500' /></div>
               <div className='flex flex-col gap-0.5 md:items-center items-start justify-center'>
                 <div className='font-bold text-[20px] opacity-80 '>Whatsapp</div>
-                <div className=' opacity-60'>
+                <div className=' opacity-60 hover:text-blue-600'>
                   +923097119974
                 </div>
               </div>
