@@ -17,8 +17,8 @@ export default function () {
         className='md:w-[50%]'>
         <div className='flex md:justify-end justify-center relative'>
           <img src={constimg} alt="" className='rounded-2xl md:w-[65%] h-[50vh]' />
-          <img src={rounded} alt="" className='absolute -bottom-16 -right-16 bg-white rounded-[50%] rounds hidden md:block' />
-          <img src={working} alt="" className='absolute bottom-0 right-0 w-[30px] hidden md:block' />
+          <img src={rounded} alt="" className='absolute -bottom-8 -right-8 bg-white rounded-[50%] rounds hidden md:block w-40' />
+          <img src={working} alt="" className='absolute bottom-6 right-8 w-[34px] hidden md:block' />
         </div>
       </motion.div>
       <motion.div
@@ -30,10 +30,10 @@ export default function () {
           <div className='flex flex-col justify-center w-[80%] items-center md:items-start gap-4'>
             <h1 className=' font-bold text-blue-700 text-[20px]'>ABOUT ME</h1>
             <h2 className='flex flex-col gap-1 items-center md:items-start'>
-              <div className='font-bold text-[20px] opacity-80'>Front-end Developer</div>
+              <div className='font-bold text-[20px] opacity-80'>Software Engineer</div>
               {/* <div className='font-bold text-[20px] opacity-80'>based in Gujrat, Pakistan📍</div> */}
               <div className='flex flex-col gap-3 mt-4 justify-center items-center text-center md:text-left'>
-                <div className='text-justify'>Hi, I'm Daud Mir,MERN stack developer from Lahore, Pakistan, specialized in Frontend Developement. I’m passionate about building responsive, user-friendly web applications with clean and intuitive UI/UX designs. My goal is to combine functionality and aesthetics to create seamless digital experiences.</div>
+                <div className='text-justify'>I'm a self-taught Software Engineer specializing in the MERN stack, with a strong focus on frontend development. I love creating responsive, user-friendly web interfaces using modern tools like React.js and Tailwind CSS.Currently mentoring interns, I bring real-world development experience and clean coding practices to every project I work on.</div>
               </div>
             </h2>
           </div>
